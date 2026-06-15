@@ -1,23 +1,14 @@
 {
-  "name": "OpenCode Dev Container",
-  "image": "mcr.microsoft.com/devcontainers/base:ubuntu-22.04",
-  "features": {
-    "ghcr.io/devcontainers/features/git:1": {},
-    "ghcr.io/devcontainers/features/node:1": {}
-  },
+  "name": "OpenCode",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
   "postCreateCommand": "curl -fsSL https://opencode.ai/install | bash",
+  "postStartCommand": "bash /workspace/start.sh",
   "forwardPorts": [3000],
   "portsAttributes": {
     "3000": {
-      "label": "OpenCode Web",
+      "label": "OpenCode",
       "onAutoForward": "notify",
       "visibility": "public"
-    }
-  },
-  "postStartCommand": "bash start.sh",
-  "customizations": {
-    "codespaces": {
-      "openInWebIde": true
     }
   }
 }
