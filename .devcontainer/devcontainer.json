@@ -2,7 +2,7 @@
   "name": "OpenCode",
   "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
   "postCreateCommand": "curl -fsSL https://opencode.ai/install | bash",
-  "postStartCommand": "bash /workspace/start.sh",
+  "postStartCommand": "bash start.sh",
   "forwardPorts": [3000],
   "portsAttributes": {
     "3000": {
